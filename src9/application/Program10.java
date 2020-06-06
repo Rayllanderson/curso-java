@@ -4,6 +4,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
+
+import javax.sound.midi.Soundbank;
+
 import model.entities.*;
 
 public class Program10 {
@@ -33,21 +36,17 @@ public class Program10 {
 	    checkIn = sdf.parse(scan.next());
 	    System.out.print("Data de Check-out (DD/MM/AAAA): ");
 	    checkOut = sdf.parse(scan.next());
-
-	    Date now = new Date();
-	    if (checkIn.before(now) || checkOut.before(now)) {
-		System.out.println("Erro na reserva: Reservações só podem acontecer em datas futuras");
-	    } else if (!checkOut.after(checkIn)) {
-		System.out.println("Erro na reserva: a data de check-out precisa ser uma data maior que a do check in");
+	    String error = reservation.updateDates(checkIn, checkOut);
+	    if (error != null) {
+		System.out.println("Erro na reserva: " + error);
 	    } else {
-		reservation.updateDates(checkIn, checkOut);
 		System.out.println("Updated");
 		System.out.println(reservation);
 	    }
 
 	}
 	scan.close();
-	
+
     }
 
 }
