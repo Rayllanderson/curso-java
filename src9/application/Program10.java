@@ -5,27 +5,24 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
-import javax.sound.midi.Soundbank;
 
 import model.entities.*;
+import model.exceptions.DomainException;
 
 public class Program10 {
 
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) {
 	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 	Scanner scan = new Scanner(System.in);
 
-	System.out.print("Número do quarto: ");
-	int numero = scan.nextInt();
-	System.out.print("Data de Check-in (DD/MM/AAAA): ");
-	Date checkIn = sdf.parse(scan.next());
-	System.out.print("Data de Check-out (DD/MM/AAAA): ");
-	Date checkOut = sdf.parse(scan.next());
+	try {
+	    System.out.print("Número do quarto: ");
+	    int numero = scan.nextInt();
+	    System.out.print("Data de Check-in (DD/MM/AAAA): ");
+	    Date checkIn = sdf.parse(scan.next());
+	    System.out.print("Data de Check-out (DD/MM/AAAA): ");
+	    Date checkOut = sdf.parse(scan.next());
 
-	// after = !(o checkout aconteceu depois do check in?)
-	if (!checkOut.after(checkIn)) {
-	    System.out.println("Erro na reserva: a data de check-out precisa ser uma data maior que a do check in");
-	} else {
 	    Reservation reservation = new Reservation(numero, checkIn, checkOut);
 	    System.out.println(reservation);
 
@@ -36,16 +33,20 @@ public class Program10 {
 	    checkIn = sdf.parse(scan.next());
 	    System.out.print("Data de Check-out (DD/MM/AAAA): ");
 	    checkOut = sdf.parse(scan.next());
-	    String error = reservation.updateDates(checkIn, checkOut);
-	    if (error != null) {
-		System.out.println("Erro na reserva: " + error);
-	    } else {
-		System.out.println("Updated");
-		System.out.println(reservation);
-	    }
+	    reservation.updateDates(checkIn, checkOut);
 
+	    System.out.println("Updated");
+	    System.out.println(reservation);
+	} catch (ParseException e) {
+	    System.out.println("Formato de data inválido. Digite uma nesse formato (dd/mm/aaaa)");
+	}catch (DomainException e) {
+	    System.out.println("Erro na reserva: " + e.getMessage());
+	}catch(RuntimeException e) {
+	    System.out.println("Erro inesperado");
 	}
-	scan.close();
+	finally {
+	    scan.close();
+	}
 
     }
 
