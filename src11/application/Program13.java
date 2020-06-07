@@ -10,12 +10,7 @@ public class Program13 {
 
 	String caminhoArquivo = "C:\\Users\\Anna Lucia\\eclipse-workspace\\Arquivos-Java\\in.txt";
 
-	FileReader fr = null;
-	BufferedReader br = null;
-
-	try {
-	    fr = new FileReader(caminhoArquivo);
-	    br = new BufferedReader(fr);
+	try (BufferedReader br = new BufferedReader (new FileReader(caminhoArquivo))){
 
 	    String line = br.readLine();
 	    while (line != null) {
@@ -25,18 +20,8 @@ public class Program13 {
 
 	} catch (IOException e) {
 	    System.out.println("Error: " + e.getMessage());
-	} finally {
-	    try {
-		if (br != null) {
-		    br.close();
-		}
-		if (fr != null) {
-		    fr.close();
-		}
-	    } catch (IOException e) {
-		e.printStackTrace();
-	    }
-	}
+	} 
+	
 
     }
 
