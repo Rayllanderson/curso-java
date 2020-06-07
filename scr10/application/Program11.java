@@ -33,7 +33,7 @@ public class Program11 {
 	    System.out.println("Desculpe, " + e.getMessage());
 	    
 	} catch (InputMismatchException e) {
-	    System.out.println("Tente digita um número válido.");
+	    System.out.println("Tente digitar um número válido.");
 	    
 	} catch (RuntimeException e) {
 	    System.out.println("ops... ocorreu um erro inesperado :/");
