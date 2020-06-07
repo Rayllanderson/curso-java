@@ -71,7 +71,6 @@ public class Post {
 
     @Override
     public String toString() {
-	
 	StringBuilder sb = new StringBuilder();
 	sb.append(this.title + "\n");
 	sb.append(content + "\n");
