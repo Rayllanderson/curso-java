@@ -2,16 +2,18 @@
 <classpath>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11"/>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="src" path="src2"/>
-	<classpathentry kind="src" path="scr3"/>
-	<classpathentry kind="src" path="src4"/>
-	<classpathentry kind="src" path="src5"/>
-	<classpathentry kind="src" path="src6"/>
-	<classpathentry kind="src" path="src7"/>
-	<classpathentry kind="src" path="src8"/>
-	<classpathentry kind="src" path="src9"/>
-	<classpathentry kind="src" path="scr10"/>
-	<classpathentry kind="src" path="src11"/>
-	<classpathentry kind="src" path="src12"/>
+	<classpathentry kind="src" path="POO.01"/>
+	<classpathentry kind="src" path="POO.02"/>
+	<classpathentry kind="src" path="POO.03"/>
+	<classpathentry kind="src" path="POO.04"/>
+	<classpathentry kind="src" path="POO.05"/>
+	<classpathentry kind="src" path="POO.06"/>
+	<classpathentry kind="src" path="POO.07"/>
+	<classpathentry kind="src" path="Exception"/>
+	<classpathentry kind="src" path="Exception.exer01"/>
+	<classpathentry kind="src" path="Arquivos"/>
+	<classpathentry kind="src" path="Interfaces"/>
+	<classpathentry kind="src" path="interface.exer01"/>
+	<classpathentry kind="src" path="interfaces2"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
