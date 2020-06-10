@@ -15,5 +15,6 @@
 	<classpathentry kind="src" path="Interfaces"/>
 	<classpathentry kind="src" path="interface.exer01"/>
 	<classpathentry kind="src" path="interfaces2"/>
+	<classpathentry kind="src" path="interface3"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
