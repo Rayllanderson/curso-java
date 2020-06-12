@@ -24,6 +24,10 @@ public class Funcionario1 implements Comparable<Funcionario1>{
     @Override
     public int compareTo(Funcionario1 otherString) {
 	return - this.salario.compareTo(otherString.getSalario()); // o - (menos) é pra imprimir de forma decrescente
+	//metodo compareTo: retorna um inteiro.
+	// - NEGATIVO: caso o número seja menor;
+	// 0 ZERO: caso sejam iguais;
+	// + POSITIVO: caso seja maior que o comparado
     }
     
     
