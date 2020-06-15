@@ -33,5 +33,4 @@ public class FigurasGeometricas {
 	}
 	return sum;
     }
-
 }
