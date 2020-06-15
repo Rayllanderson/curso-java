@@ -17,5 +17,6 @@
 	<classpathentry kind="src" path="interfaces2"/>
 	<classpathentry kind="src" path="interface3"/>
 	<classpathentry kind="src" path="generics"/>
+	<classpathentry kind="src" path="lambda"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

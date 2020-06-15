@@ -13,7 +13,6 @@ import model.services.CalculationService;
 public class CalculationProgram {
 
     public static void main(String[] args) {
-	
 	String path = "C:\\Users\\Anna Lucia\\eclipse-workspace\\Arquivos-Java\\in1.txt";
 	List <Product2> list = new ArrayList<>();
 	List <Double> princes = new ArrayList<>();

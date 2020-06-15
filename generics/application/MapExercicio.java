@@ -31,7 +31,6 @@ public class MapExercicio {
 		map.put(c, sum);
 		itensCsv = br.readLine();
 	    }
-	    
 	    System.out.println("Quantidade Total de votos: ");
 	    for (Candidatos c1 : map.keySet()) {
 		System.out.println(c1 + ": " + map.get(c1));
